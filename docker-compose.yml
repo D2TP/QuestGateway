@@ -1,0 +1,15 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: "3.4"
+
+services:
+  fbnquestgatewayv2:
+    image: fbnquestgateway
+    container_name: Questgateway02
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5009
+    volumes:
+      - /c/GatewaySettings/appsettings.gatewayweb.json:/app/appsettings.json
