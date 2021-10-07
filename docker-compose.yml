@@ -5,7 +5,7 @@ version: "3.4"
 services:
   fbnquestgatewayv2:
     image: fbnquestgateway
-    container_name: Questgateway02
+    container_name: Questgateway
     build:
       context: .
       dockerfile: ./Dockerfile

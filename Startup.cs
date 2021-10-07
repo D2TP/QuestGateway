@@ -20,6 +20,13 @@ namespace QuestGateway
         // the web application via services in the DI container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("customPolicy", builder =>
+                {
+                    builder.AllowAnyOrigin();
+                });
+            });
             // Add the reverse proxy to capability to the server
             var proxyBuilder = services.AddReverseProxy();
             // Initialize the reverse proxy from the "ReverseProxy" section of configuration
@@ -36,6 +43,8 @@ namespace QuestGateway
             }
             // Enable endpoint routing, required for the reverse proxy
             app.UseRouting();
+
+            app.UseCors();
             // Register the reverse proxy routes
             app.UseEndpoints(endpoints =>
             {
