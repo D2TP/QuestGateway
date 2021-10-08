@@ -10,6 +10,6 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 8087:80
+      - 8085:80
     volumes:
       - /c/GatewaySettings/appsettings.gatewayweb.json:/app/appsettings.json
