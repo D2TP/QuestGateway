@@ -27,7 +27,7 @@ namespace QuestGateway
                     builder.AllowAnyOrigin();                     
                     builder.AllowAnyHeader();
                     builder.AllowAnyMethod();
-                    builder..AllowCredentials();
+                    //builder..AllowCredentials();
                 });
             });
             // Add the reverse proxy to capability to the server
