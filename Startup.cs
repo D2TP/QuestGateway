@@ -24,7 +24,9 @@ namespace QuestGateway
             {
                 options.AddPolicy("customPolicy", builder =>
                 {
-                    builder.AllowAnyOrigin();
+                    builder.AllowAnyOrigin();                     
+                    builder.AllowAnyHeader();
+                    builder.AllowAnyMethod();
                 });
             });
             // Add the reverse proxy to capability to the server
