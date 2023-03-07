@@ -12,4 +12,4 @@ services:
     ports:
       - 8085:80
     volumes:
-      - /var/GatewaySettings/appsettings.gatewayweb.json:/app/appsettings.json
+      - /home/omni-channel/api-gateway/GatewaySettings/appsettings.gatewayweb.json:/app/appsettings.json
